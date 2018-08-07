@@ -23,16 +23,6 @@ The Elastic Stack is the next evolution of ELK.
 ## 1. Seting-up an ELK infrastructure 
 An ELK stack can be implemented very easily, not matter the processor architecture.
 
-If you want to monitor a LinuxONE Crypto activities with an ELK running on x86, please follow the following instructions:
-- Deploying a docker ELK on Linux: https://github.com/deviantony/docker-elk
-
-If you want to monitor a LinuxONE Crypto activities with an ELK running also on LinuxONE, please follow the following instructions:
-- Building Elasticsearch on LinuxONE : https://github.com/linux-on-ibm-z/docs/wiki/Building-Elasticsearch
-- Buidling Logstash on LinuxONE : https://github.com/linux-on-ibm-z/docs/wiki/Building-Logstash
-- Building Kibana on LinuxONE : https://github.com/linux-on-ibm-z/docs/wiki/Building-Kibana
-
-(Recommanded) If you want to monitor a LinuxONE Crypto activities after deploying a docker ELK on Linux:LinuxONE, please follow the following instructions:
-
 Required tool:
 ```
 sudo apt-get install git docker docker-compose
@@ -41,16 +31,6 @@ sudo apt-get install git docker docker-compose
 Required dockerfile:
 ```
 sudo git clone https://github.com/guikarai/ELK-CPACF.git
-```
-
-Building a kibana docker image for s390 architecture:
-```
-sudo docker build -t "kibana:Dockerfile" .
-```
-
-Building an elasticsearch docker image for s390 architecture:
-```
-sudo docker build -t "elasticsearch:Dockerfile" .
 ```
 
 Starting up ELK:
