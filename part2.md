@@ -1,4 +1,4 @@
-# Part II - Starting an ELK on LinuxONE for Monitoring Cryptographic Activities
+# Step 2 - Starting an ELK on LinuxONE for Monitoring Cryptographic Activities
 
 In this part, you will learn how to monitor captured LinuxONE crypto activity thanks to APIs. You will send these captured information to a no-slq database (Elasticsearch Database).
 
