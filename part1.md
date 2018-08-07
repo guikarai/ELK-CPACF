@@ -1,5 +1,5 @@
 The following code pattern requires the following infrastructure:
-* A LinuxONE Virtual Machine provisionned by the LinuxONE Community cloud
+* A LinuxONE or Linux on IBM Z Virtual Machine
 * A Canonical Ubuntu 16.04.LTS Linux Virtual Machine
 
 # About Pervasive Encryption on LinuxONE
