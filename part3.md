@@ -35,6 +35,8 @@ It is time to create an Index Pattern to Connect to Elasticsearh. To use Kibana,
 
 ## Creating your first index
 
+### A. Define an index pattern named "monitor*"
+
 An index pattern identifies one or more Elasticsearch indices that you want to explore with Kibana. Kibana looks for index names that match the specified pattern. An asterisk (*) in the pattern matches zero or more characters. For example, the pattern myindex-* matches all indices whose names start with myindex-, such as myindex-1 and myindex-2.
 
 An index pattern can also simply be the name of a single index.
@@ -44,13 +46,27 @@ An index pattern can also simply be the name of a single index.
 **Action:** Click on Index pattern area, and fill the tab with **monitor-vmstat*** as follow. 
 
 **Action:** Then click to **Next Step**.
+  
+### B. Save your defined an index pattern
+
+Your index contains a timestamp field that you want to use to perform time-based comparisons, select the Index contains time-based events option and select the index field that contains the timestamp. Kibana reads the index mapping to list all of the fields that contain a timestamp.
+
+**Action:** In configure settings panel, please select **@Timestamp**.
+
+**Action:**  Then validate by clicking on **Create** index pattern.
 
 ![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/kibana-index-creation2.png)
 
+### C. Check your new defined pattern
+
+Here you are, you just sourced Kibana to your crypto monitoring Elasticsearch DB and its content. The structure of the index monitor* is displayed front of you.
+
 ![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/kibana-index-creation3.png)
 
-![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/kibana-index-creation4.png)
-  
+It is now time to capture a set of information from the DB thanks to a search.
+**Action:** Click on the left tab bar on **"Discover"**. 
+
+
 #### 2. Define an index pattern
 Click on the left tab bar to "Management".
 
