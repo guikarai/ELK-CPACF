@@ -94,17 +94,18 @@ Now we are good. Let's save this search with a name we can refer later. Saving s
 **Action:** Now on the top right bar, click on Save as follow:
 ![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/kibana-search-creation2.png)
 
-#### 5. Save your first search as "vmstats". 
-This will be used as dashboard basements to build visualization later.
+If successful, you must see the following message on top of the Kibana interface:
 ![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/kibana-search-creation3.png)
-
-If it succeeds, you must the following message on top of the Kibana interface:
-![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/kibana-search-creation4.png)
 
 ## Creating a search about Linux crypto ICASTATS data
 
 Same as above with the following informations:
 
+**Pattern-index :** monitor-icastats
+
+**Available-field :** Host
+
+**Save search as :** icastats-host
 
 # Creating your first visualizations
 
