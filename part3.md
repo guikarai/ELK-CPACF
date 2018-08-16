@@ -49,8 +49,6 @@ An index pattern can also simply be the name of a single index.
 
 ![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/kibana-index-creation3.png)
 
-![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/kibana-index-creation3.png)
-
 ![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/kibana-index-creation4.png)
   
 #### 2. Define an index pattern
