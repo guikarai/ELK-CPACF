@@ -113,7 +113,11 @@ docker ps
 
 As you can see, there are 3 running docker containers: Elasticsearch, Kibana and Logstash.
 
-## Tooling form Elasticsearch
+Please check that the following URL return something to you:
+* YourIP-Address:9200  : Elasticsearch technical message indicating everything is alright
+* YourIP-Address:5601  : Main Kibana landing page
+
+## Tooling for Elasticsearch
 To see with a user friendly interface the status of your elasticsearch instance, please, install in your computer the elasticsearch web-plugin named elasticsearch-head. 
 
 Fill in the form and connect to your elasticsearch instance with the appropriate IP adress. The portname is by default 9200.
@@ -141,7 +145,38 @@ Now, let's make this script executable thanks to following command:
 chmod +x vmstat-script.sh
 ```
 
-Let's start now the VMSTAT data collection.
+Let's start now the VMSTAT data collection. Please use the following command:
+```
+./vmstat-script.sh&
+```
+It is normal to see every 5 seconds a new line being displayed.
+
+Please, now open a new ssh session to your LinuxONE Linux guest.
+
+### Linux VMSTATS Data collection
+
+In your new LinuxONE Linux guest, please move to the the cloned git repository. Please issue the following command:
+```
+cd ELK-CPACF/
+```
+
+Now, let's configure the main data source made of Linux crypto ICASTATS. To collect and to push these data to elasticsearch db we will use a script. Let's start to modify this script to adhere with your environment. Please, correct the default ESserverIP adress with your @IP adress according to your environment. Change the 2 line as show below:
+```
+vi icastats/vi icastats/crypto-monitoring.sh
+  #!/bin/bash
+  ESserverIP="127.0.0.1" <--- Change with your IP address here
+```
+
+Now, let's make this script executable thanks to following command:
+```
+chmod +x vi icastats/crypto-monitoring.sh
+```
+
+Let's start now the VMSTAT data collection. Please use the following command:
+```
+./vi icastats/crypto-monitoring.sh
+```
+
 
 ### Linux Crypto Icastats Data collection
 
