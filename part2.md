@@ -117,7 +117,7 @@ As you can see, there are 3 running docker containers: Elasticsearch, Kibana and
 To see with a user friendly interface the status of your elasticsearch instance, please, install in your computer the elasticsearch web-plugin named elasticsearch-head. 
 
 Fill in the form and connect to your elasticsearch instance with the appropriate IP adress. The portname is by default 9200.
-Eg. http://<your linuxONE public IP adress>:9200. 
+Eg. http://<@IP>:9200. 
   
 You should be able to see something simillar to the following:
 ![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/Capture%20d%E2%80%99e%CC%81cran%202018-06-20%20a%CC%80%20170639%20(2).png)
