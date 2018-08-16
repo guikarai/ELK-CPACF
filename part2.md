@@ -22,7 +22,7 @@ The Elastic Stack is the next evolution of ELK.
 
 
 
-## 1. Cloning the CPACF-ELK github repository
+## 1. Cloning the ELK-CPACF github repository
 
 First of all, let's install the lab required components and their dependencies in your LinuxONE Linux guest. Please issue the following command:
 ```
@@ -31,8 +31,26 @@ yum install docker-ce docker-compose git curl
 
 Once done, it now time to clone the github repository of this code pattern. Please issue the following command:
 ```
-git clone
+git clone https://github.com/guikarai/ELK-CPACF.git
 ```
+
+Now, let's explore the content of the ELK-CPACF git. Please issue the following command:
+```
+ls -l
+```
+
+**Important content regarding the code pattern:**
+* ELK/      : Directory about the ELK docker stack and configuration.
+* vmstat    : Main script to start to colect local vmstats and to push to Elasticsearh.
+* icastats  : Main script to start to colect local icastats and to push to Elasticsearh.
+
+**Github administrative content:**
+* Images/   : Administrative folder to store illustrations.
+* README.md : Administrative git landing page.
+* part1.md  : Administrative git landing page of part1.
+* part2.md  : Administrative git landing page of part2.
+* part3.md  : Administrative git landing page of part3.
+
 
 ## 1. Deploying an ELK Docker stack
 
