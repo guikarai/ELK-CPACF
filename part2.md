@@ -1,4 +1,12 @@
-# Step 2 - Starting an ELK on LinuxONE for Monitoring Cryptographic Activities
+# Welcome in Step 2 about instantiating the ELK microservice from the IBM Cloud private catalog
+
+## The agenda for this section is about:
+1. What the ELK..?!
+2. What to keep in mind about ELK?
+3. Cloning the ELK-CPACF github repository
+4. Deploying an ELK Docker based stack
+5. Tooling for Elasticsearch
+6. Seting-up local linux and crypto data collection
 
 In this part, you will learn how to monitor captured LinuxONE crypto activity thanks to APIs. You will send these captured information to a no-slq database (Elasticsearch Database).
 
@@ -64,7 +72,7 @@ ls -l
 * part3.md    : Administrative git landing page of part3.
 
 
-## Deploying an ELK Docker stack
+## Deploying an ELK Docker bsaed stack
 
 Let's move inside the ELK/ repository. Please issue the following command:
 ```
