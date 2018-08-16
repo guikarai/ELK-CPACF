@@ -153,7 +153,7 @@ It is normal to see every 5 seconds a new line being displayed.
 
 Please, now open a new ssh session to your LinuxONE Linux guest.
 
-### Linux VMSTATS Data collection
+### Linux crypto ICASTATS Data collection
 
 In your new LinuxONE Linux guest, please move to the the cloned git repository. Please issue the following command:
 ```
@@ -162,19 +162,23 @@ cd ELK-CPACF/
 
 Now, let's configure the main data source made of Linux crypto ICASTATS. To collect and to push these data to elasticsearch db we will use a script. Let's start to modify this script to adhere with your environment. Please, correct the default ESserverIP adress with your @IP adress according to your environment. Change the 2 line as show below:
 ```
-vi icastats/vi icastats/crypto-monitoring.sh
+vi icastats/crypto-monitoring.sh
   #!/bin/bash
   ESserverIP="127.0.0.1" <--- Change with your IP address here
 ```
 
 Now, let's make this script executable thanks to following command:
 ```
-chmod +x vi icastats/crypto-monitoring.sh
+chmod +x icastats/crypto-monitoring.sh
 ```
 
 Let's start now the VMSTAT data collection. Please use the following command:
 ```
-./vi icastats/crypto-monitoring.sh
+./icastats/crypto-monitoring.sh&
+
+  {"_index":"monitor-icastats","_type":"icastats","_id":"Rnn7QmUBe_nBz08EzK4S","_version":1,"result":"created","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":0,"_primary_term":1}sendToES 1534427122 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 169
+  {"_index":"monitor-icastats","_type":"icastats","_id":"R3n7QmUBe_nBz08E367i","_version":1,"result":"created","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":0,"_primary_term":1}sendToES 1534427127 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+  ...
 ```
 
 
@@ -191,10 +195,10 @@ sudo ./icastats.sh
 [...truncated...]
 ```
 
-Ervery 5 seconds, a record will be sent to the elasticsearch db. 
+It is normal to see every 5 seconds a new line being displayed. Ervery 5 seconds, a record will be sent to the elasticsearch db. 
 
 To assess that it works properly, with web interface there are new records added in the elasticsearch db.
 Your elasticsearh web interface should look like the foolowing:
 ![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/Capture%20d%E2%80%99%C3%A9cran%202018-05-24%20%C3%A0%20140351%20(2).png)
 
-You are now good for the part III about creating a dashboard to magnify live captured crypto information.
+You are now good for the part 3 about creating a dashboard to magnify live captured crypto information.
