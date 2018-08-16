@@ -54,6 +54,41 @@ ls -l
 
 ## 1. Deploying an ELK Docker stack
 
+Let's move inside the ELK/ repository. Please issue the following command:
+```
+cd  ELK/
+```
+
+Let's brows the content of this directory. Please issue the following command:
+```
+ls -l
+
+  total 8
+  drwxr-xr-x 2 root root 4096 Aug 16 14:26 config
+  -rw-r--r-- 1 root root  847 Aug 16 14:46 docker-compose.yml
+```
+
+**Note:**
+
+* config/             :   This is a directory containing configuration file of Logstash, Kibana and Elasticsearch.
+* docker-compose.yml  :   This is a docker-compose file describing how to start and with which configuration containers of Logstash, Kibana and Elasticsearch from images.
+
+We are now ready to deploy the ELK docker based stack. Please issue the following command:
+```
+docker ps
+CONTAINER ID        IMAGE                                      COMMAND               CREATED             STATUS              PORTS                                                                                                    NAMES
+```
+
+As you can see, there is no running containers. This is normal. Now let's pull the docker base ELK stack using the docker-compose file. Please issue the following command:
+```
+docker-compose -f docker-compose.yml up -d
+
+  Creating Elasticsearch
+  Creating Kibana
+  Creating Logstash
+```
+
+Let's check that the ELK stack run properly. Please issue the following command:
 ```
 docker ps
 
@@ -64,32 +99,7 @@ docker ps
 
 ```
 
-
-## 1. Seting-up an ELK infrastructure 
-An ELK stack can be implemented very easily, not matter the processor architecture.
-
-Required tool:
-```
-sudo apt-get install git docker docker-compose
-```
-
-Required dockerfile:
-```
-sudo git clone https://github.com/guikarai/ELK-CPACF.git
-```
-
-Starting up ELK:
-```
-sudo docker-compose up -d
-```
-
-Please verify that the ELK Stack is properly started issuing the following command:
-```
-root@crypt06:~# sudo docker ps -a
-CONTAINER ID        IMAGE                     COMMAND                  CREATED             STATUS              PORTS                                            NAMES
-fc2242672599        dockerelk_kibana          "/bin/bash /usr/lo..."   22 hours ago        Up 22 hours         0.0.0.0:5601->5601/tcp                           dockerelk_kibana_1
-8f87424acd61        dockerelk_elasticsearch   "/usr/local/bin/do..."   22 hours ago        Up 22 hours         0.0.0.0:9200->9200/tcp, 0.0.0.0:9300->9300/tcp   dockerelk_elasticsearch_1
-```
+As you can see, there are 3 running docker containers: Elasticsearch, Kibana and Logstash.
 
 ## 2. Seting-up crypto data collection
 Please, correct the default ESserverIP adress with your @IP adress according to your environment.
