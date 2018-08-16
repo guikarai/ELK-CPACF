@@ -37,19 +37,31 @@ git clone https://github.com/guikarai/ELK-CPACF.git
 Now, let's explore the content of the ELK-CPACF git. Please issue the following command:
 ```
 ls -l
+
+  total 72
+  drwxr-xr-x 3 root root  4096 Aug 16 15:00 ELK
+  -rw-r--r-- 1 root root  3504 Aug 16 15:06 README.md
+  -rw-r--r-- 1 root root    26 Aug 16 15:06 _config.yml
+  drwxr-xr-x 3 root root  4096 Aug 16 15:12 icastats
+  drwxr-xr-x 2 root root  4096 Aug 16 15:06 images
+  -rw-r--r-- 1 root root 29456 Aug 16 15:06 part1.md
+  -rw-r--r-- 1 root root  7768 Aug 16 15:06 part2.md
+  -rw-r--r-- 1 root root  6759 Aug 16 15:06 part3.md
+  -rw-r--r-- 1 root root  2785 Aug 16 15:10 vmstat-script.sh
 ```
 
 **Important content regarding the code pattern:**
 * ELK/      : Directory about the ELK docker stack and configuration.
-* vmstat    : Main script to start to colect local vmstats and to push to Elasticsearh.
-* icastats  : Main script to start to colect local icastats and to push to Elasticsearh.
+* vmstat-script    : Main script to start to collect local vmstats and to push to Elasticsearh.
+* icastats/  : Directory containing main scripts to start to collect local icastats and to push to Elasticsearh.
 
 **Github administrative content:**
-* Images/   : Administrative folder to store illustrations.
-* README.md : Administrative git landing page.
-* part1.md  : Administrative git landing page of part1.
-* part2.md  : Administrative git landing page of part2.
-* part3.md  : Administrative git landing page of part3.
+* images/     : Administrative folder to store illustrations.
+* README.md   : Administrative git landing page.
+* _config.yml : Administrative git landing page.
+* part1.md    : Administrative git landing page of part1.
+* part2.md    : Administrative git landing page of part2.
+* part3.md    : Administrative git landing page of part3.
 
 
 ## 1. Deploying an ELK Docker stack
