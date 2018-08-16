@@ -86,18 +86,15 @@ When you submit a search request, the histogram, Documents table, and Fields lis
 
 By default, the hits are listed in reverse chronological order, with the newest documents shown first. You can reverse the sort order by clicking the Time column header. You can also sort the table by the values in any indexed field.
 
-Click on Available field MODE as follow:
+**Action:** On Available field MODE Click on "add" field MODE as follow:
 ![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/kibana-search-creation1.png)
 
-#### 3. Click on "add" field MODE as follow:
-![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/kibana-search-creation2.png)
-
 #### 4. Now on the top right bar, click on Save as follow:
-![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/kibana-search-creation3.png)
+![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/kibana-search-creation2.png)
 
 #### 5. Save your first search as "icastats". 
 This will be used as dashboard basements to build visualization later.
-![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/kibana-search-creation4.png)
+![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/kibana-search-creation3.png)
 
 ## Creating a search about Linux crypto ICASTATS data
 
