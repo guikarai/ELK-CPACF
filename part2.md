@@ -152,6 +152,7 @@ Let's start now the VMSTAT data collection. Please use the following command:
 It is normal to see every 5 seconds a new line being displayed.
 
 You can verify that there are new documents pushed to elasticsearch db thanks to your web browser tool. If you check it, and if you set the refresh to "Refresh every 5s" in the top-right corner, you should be able to see something as the following:
+
 ![alt-text](https://github.com/guikarai/ELK-CPACF/blob/master/images/elasticsearch-tool-vmstat.png)
 
 
@@ -189,6 +190,7 @@ It is normal to see every 5 seconds a new line being displayed. Ervery 5 seconds
 
 To assess that it works properly, with web interface there are new records added in the elasticsearch db.
 Your elasticsearh web interface should look like the foolowing:
+
 ![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/elasticsearch-tool-vmstat-icastats.png)
 
 You are now good for the part 3 about creating a dashboard to magnify live captured crypto information.
