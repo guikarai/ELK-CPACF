@@ -86,15 +86,20 @@ When you submit a search request, the histogram, Documents table, and Fields lis
 
 By default, the hits are listed in reverse chronological order, with the newest documents shown first. You can reverse the sort order by clicking the Time column header. You can also sort the table by the values in any indexed field.
 
-**Action:** On Available field MODE Click on "add" field MODE as follow:
+**Action:** On Available field MODE, on the line of "Host", Click on "add" field MODE. It result the following:
 ![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/kibana-search-creation1.png)
 
-#### 4. Now on the top right bar, click on Save as follow:
+Now we are good. Let's save this search with a name we can refer later. Saving searches enables you to reload them into Discover and use them as the basis for visualizations. Saving a search saves both the search query string and the currently selected index pattern.
+
+**Action:** Now on the top right bar, click on Save as follow:
 ![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/kibana-search-creation2.png)
 
-#### 5. Save your first search as "icastats". 
+#### 5. Save your first search as "vmstats". 
 This will be used as dashboard basements to build visualization later.
 ![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/kibana-search-creation3.png)
+
+If it succeeds, you must the following message on top of the Kibana interface:
+![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/kibana-search-creation4.png)
 
 ## Creating a search about Linux crypto ICASTATS data
 
