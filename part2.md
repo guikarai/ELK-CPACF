@@ -11,7 +11,7 @@ Elasticsearch can be used to search all kinds of documents. It provides scalable
 
 More information about ELK here: https://www.elastic.co
 
-## What to Keep in mind about ELK?
+## What to keep in mind about ELK?
 "ELK" is the acronym for three open source projects: Elasticsearch, Logstash, and Kibana. 
 
 * Elasticsearch is a search and analytics engine. 
