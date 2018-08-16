@@ -1,4 +1,4 @@
-# Welcome in Step 2 about instantiating the ELK microservice from the IBM Cloud private catalog
+# Welcome in Step 2 about deploying a docker based ELK stack running on LinuxONE Community Cloud.
 
 ## The agenda for this section is about:
 1. What the ELK..?!
