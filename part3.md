@@ -1,17 +1,31 @@
-# Part III. Building a crypto dashboard with Kibana
+# Welcome in the Step 4 about building a crypto dashboard with Kibana.
 
+In this part, you will use the ELK microservices to create your first crypto dashboard with Kibana.
+
+The agenda of this section is about:
+1. Accessing to Kibana
+2. Sourcing the ElasticSearch DataSource
+3. Creating your first search with Kibana
+4. Creating your first charts with Kibana
+5. Creating your first dashboard with Kibana
+6. Sharing your first crypto dashboard
 In this part, you will create your first crypto dashboard with Kibana. 
 
 Kibana is a window into the Elastic Stack. It enables visual exploration and real-time analysis of your data in Elasticsearch. This video is perfect for users that are new to Kibana and are looking for a primer on data exploration, visualization, and dashboarding. Watch Alex Francoeur give a demo of going from a Kibana installation to a full dashboard in matter of minutes. 
 
-## Creating your first index
+## Accessing to Kibana
 
-#### 1. Connecting to the URL of your kibana instance.
 Note that your IP adress is different, you must adapt the following accordingly.
 http://18.197.196.0:5601
 
 The kibana web interface should look like as follow:
-![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/Capture%20d%E2%80%99e%CC%81cran%202018-06-20%20a%CC%80%2016.58.10%20(2).png)
+![alt text](https://github.com/guikarai/ELK-CPACF/images/kibana-landingpage.png)
+
+## Creating your first index
+
+
+
+
   
 #### 2. Define an index pattern
 Click on the left tab bar to "Management".
