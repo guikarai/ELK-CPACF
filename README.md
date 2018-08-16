@@ -45,12 +45,11 @@ This journey stats with a LinuxONE Linux guest which after some optimization wil
 ## Step 2 - [Deploying a docker based ELK stack running on LinuxONE Community Cloud.](https://github.com/guikarai/ELK-CPACF/blob/master/part2.md)
     
     1. What the ELK..?!
-    2. What to Keep in mind about ELK?
-    3. Discover the Helm chart from the calalog
-    4. Configure and install your ELK microservices
-    5. Access your ELK microservice
-    6. Tooling for ELK crypto stack
-    7. Feeding your ELK crypto dashboard
+    2. What to keep in mind about ELK?
+    3. Cloning the ELK-CPACF github repository
+    4. Deploying an ELK Docker based stack
+    5. Tooling for Elasticsearch
+    6. Seting-up local linux and crypto data collection
 
 ## Step 3 - [Creating a crypto activity dashboard running on LinuxONE Community Cloud.](https://github.com/guikarai/ELK-CPACF/blob/master/part3.md)
 
