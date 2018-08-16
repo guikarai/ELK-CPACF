@@ -1,23 +1,66 @@
-The following code pattern requires the following infrastructure:
-* A LinuxONE or Linux on IBM Z Virtual Machine
-* A Canonical Ubuntu 16.04.LTS Linux Virtual Machine
+# Protect data on LinuxONE with "Pervasive Encryption"
+Protect your data on data LinuxONE using pervasive encryption with nearly no CPU overhead.
 
-# About Pervasive Encryption on LinuxONE
-Pervasive encryption is a data-centric approach to information security that entails protecting data entering and exiting the z14 platform. It involves encrypting data in-flight and at-rest to meet complex compliance mandates and reduce the risks and financial losses of a data breach. It is a paradigm shift from selective encryption (where only the data that is required to achieve compliance is encrypted) to pervasive encryption. Pervasive encryption with z14 is enabled through tight platform integration that includes Linux on IBM Z or LinuxONE following features:
-* Integrated cryptographic hardware: Central Processor Assist for Cryptographic Function (CPACF) is a co-processor on every processor unit that accelerates encryption. Crypto Express features can be used as hardware security modules (HSMs).
-* Data set and file encryption: You can protect Linux file systems that is transparent to applications and databases.
-* Network encryption: You can protect network data traffic by using standards-based encryption from endpoint to endpoint.
+In this Code Pattern, you will build and deploy a crypto dashboard in a LinuxONE guest running in the LinuxONE Community Cloud.
 
-## LinuxONE Crypto Stack
-Pervasive Encryption benefits of the full Power of Linux Ecosystem plus z14 Capabilities
-* LUKS dm-crypt – Transparent file & volume encryption using industry unique CPACF protected-keys
-* Network Security – Enterprise scale encryption and handshakes using z14 CPACF and SIMD (openSSL, IPSec...)
+The LinuxONE Community Cloud provides an open access to Linux running on a mainframe, primarily targeted at development, porting and functional testing. Registered users can deploy recent SLES and RHEL instances.. It is an integrated environment that enables you to design, develop, deploy and manage on-premises, containerized cloud applications behind a firewall.
 
-The IBM Z and LinuxONE systems provide cryptographic functions that, from an application program perspective, can be grouped as follows:
-* Synchronous cryptographic functions, provided by the CP Assist for Cryptographic Function (CPACF) or the Crypto Express features when defined as an accelerator.
-* Asynchronous cryptographic functions, provided by the Crypto Express features.
+When you will complete this Code Pattern, you will understand how to:
+* Configure a LinuxONE Linux guest to use the hardware cryptographic acceleration.
+* Use the LinuxONE crypto APIS to get monitoring data about hardware cryptographic use.
+* Deploy Docker images in your LinuxONE Linux guest to create an ELK stack.
+* Build an ELK Dashboard to monitor hardware cryptographic activity of LinuxONE Linux guest.
 
-The IBM Z and LinuxONE systems provide also rich cryptographic functions available via a complete crypto stack made of a set of key crypto APIs.
-![Image of the Crypto Stack](https://github.com/guikarai/PE-LinuxONE/blob/master/images/crypto-stack.png)
+# Architecture
+This journey stats with a LinuxONE Linux guest which after some optimization will be able to claim hardware cryptographic assistance. From there, captured encryption activities to be magnified thanks to a docker based ELK dashboard.
 
-**Note:** Locate openSSL and dm-crypt. For the following, we will work on how set-up a Linux environment in order to benefit of Pervasive Encryption benefits.
+![Image of the Crypto Stack](https://github.com/guikarai/ELK-CPACF/blob/master/images/code-pattern-architecture.png)
+
+1. User optimizes, collects and captures Enterprise Legacy environment encryption activity.
+3. User deploys a docker based ELK stack running on LinuxONE Community Cloud.
+3. User creates and then enjoys a crypto activity dashboard running on LinuxONE Community Cloud.
+
+# Included components
+
+* [LinuxONE Crypto](https://www.ibm.com/it-infrastructure/linuxone/capabilities/secure-cloud)
+* [OpenSSL](https://www.openssl.org/)
+* [Curl](https://curl.haxx.se/)
+
+# Featured technologies
+
+* [Docker](https://www.docker.com/)
+* [IBM LinuxONE](https://www.ibm.com/it-infrastructure/linuxone)
+* [ELK](https://www.elastic.co/fr/elk-stack)
+
+# Steps
+
+## Step 1 - [Enabling Linux to use hardware encryption](https://github.com/IBM/protect-data-on-linuxone-with-pervasive-encryption/blob/master/part1.md)
+
+    1. Introduction to the pervasive encryption
+    2. Introduction to the Linux crypto stack
+    2. Enabling Linux to use the Hardware
+    3. Enabling OpenSSL to use the hardware acceleration support
+    4. Checking Hardware Crypto functions
+
+## Step 2 - [Deploying ELK microservice from the IBM Cloud private catalog](https://github.com/IBM/protect-data-on-linuxone-with-pervasive-encryption/blob/master/part2.md)
+    
+    1. What the ELK..?!
+    2. What to Keep in mind about ELK?
+    3. Discover the Helm chart from the calalog
+    4. Configure and install your ELK microservices
+    5. Access your ELK microservice
+
+## Step 3 - [Pushing crypto activity data to the ICP ELK microservice](https://github.com/IBM/protect-data-on-linuxone-with-pervasive-encryption/blob/master/part3.md)
+    
+    1. Tooling for ELK crypto stack
+    2. Feeding your ELK crypto dashboard
+    
+## Step 4 - [Creating a crypto dashboard with ELK microservice](https://github.com/IBM/protect-data-on-linuxone-with-pervasive-encryption/blob/master/part4.md)
+
+    1. Accessing to Kibana
+    2. Sourcing the ElasticSearch DataSource
+    3. Creating your first search with Kibana
+    4. Creating your first charts with Kibana
+    5. Creating your first dashboard with Kibana
+    6. Sharing your first crypto dashboard
+
