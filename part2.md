@@ -148,6 +148,10 @@ chmod +x vmstat-script.sh
 Let's start now the VMSTAT data collection. Please use the following command:
 ```
 ./vmstat-script.sh&
+
+  {"_index":"monitor-vmstat","_type":"vmstat","_id":"Q3nqQmUBe_nBz08Ey66A","_version":1,"result":"created","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":0,"_primary_term":1}sendToES 1534426007 3 0 53852 585408 392324 1186400 0 0 0 0 273 293 31 65 0 0 4
+
+  {"_index":"monitor-vmstat","_type":"vmstat","_id":"Q3nqQmUBe_nBz08Ey66A","_version":1,"result":"created","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":0,"_primary_term":1}sendToES 1534527018 3 0 53852 585408 392324 1186400 0 0 0 0 273 293 31 65 0 0 4
 ```
 It is normal to see every 5 seconds a new line being displayed.
 
