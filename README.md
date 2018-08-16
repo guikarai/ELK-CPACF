@@ -34,7 +34,7 @@ This journey stats with a LinuxONE Linux guest which after some optimization wil
 
 # Steps
 
-## Step 1 - [Enabling Linux to use hardware encryption](https://github.com/IBM/protect-data-on-linuxone-with-pervasive-encryption/blob/master/part1.md)
+## Step 1 - [Enabling Linux to use hardware encryption](https://github.com/guikarai/ELK-CPACF/blob/master/part1.md)
 
     1. Introduction to the pervasive encryption
     2. Introduction to the Linux crypto stack
@@ -42,20 +42,17 @@ This journey stats with a LinuxONE Linux guest which after some optimization wil
     3. Enabling OpenSSL to use the hardware acceleration support
     4. Checking Hardware Crypto functions
 
-## Step 2 - [Deploying ELK microservice from the IBM Cloud private catalog](https://github.com/IBM/protect-data-on-linuxone-with-pervasive-encryption/blob/master/part2.md)
+## Step 2 - [Deploying a docker based ELK stack running on LinuxONE Community Cloud.](https://github.com/guikarai/ELK-CPACF/blob/master/part2.md)
     
     1. What the ELK..?!
     2. What to Keep in mind about ELK?
     3. Discover the Helm chart from the calalog
     4. Configure and install your ELK microservices
     5. Access your ELK microservice
+    6. Tooling for ELK crypto stack
+    7. Feeding your ELK crypto dashboard
 
-## Step 3 - [Pushing crypto activity data to the ICP ELK microservice](https://github.com/IBM/protect-data-on-linuxone-with-pervasive-encryption/blob/master/part3.md)
-    
-    1. Tooling for ELK crypto stack
-    2. Feeding your ELK crypto dashboard
-    
-## Step 4 - [Creating a crypto dashboard with ELK microservice](https://github.com/IBM/protect-data-on-linuxone-with-pervasive-encryption/blob/master/part4.md)
+## Step 3 - [Creating a crypto activity dashboard running on LinuxONE Community Cloud.](https://github.com/guikarai/ELK-CPACF/blob/master/part3.md)
 
     1. Accessing to Kibana
     2. Sourcing the ElasticSearch DataSource
@@ -63,4 +60,4 @@ This journey stats with a LinuxONE Linux guest which after some optimization wil
     4. Creating your first charts with Kibana
     5. Creating your first dashboard with Kibana
     6. Sharing your first crypto dashboard
-
+  
