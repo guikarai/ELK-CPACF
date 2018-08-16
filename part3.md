@@ -15,7 +15,7 @@ Kibana is a window into the Elastic Stack. It enables visual exploration and rea
 
 ## Accessing to Kibana
 
-Note that your IP adress is different, you must adapt the following accordingly. You can access to the Kibana landing page using the following URL: http://10.3.57.117:5601
+Note that your IP adress is different, you must adapt the following accordingly. You can access to the Kibana landing page using the following URL: http://10.3.57.112:5601
 
 A reachable kibana web interface should look like as follow:
 ![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/kibana-landingpage.png)
