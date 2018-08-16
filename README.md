@@ -1,4 +1,4 @@
-# Protect data on LinuxONE with "Pervasive Encryption"
+# Protect data on LinuxONE with "Pervasive Encryption" and Monitor Hardware Cryptographic Activities with ELK
 Protect your data on data LinuxONE using pervasive encryption with nearly no CPU overhead.
 
 In this Code Pattern, you will build and deploy a crypto dashboard in a LinuxONE guest running in the LinuxONE Community Cloud.
