@@ -185,24 +185,10 @@ Let's start now the VMSTAT data collection. Please use the following command:
   ...
 ```
 
-
-### Linux Crypto Icastats Data collection
-
-
-
-It is now time to feed your elastic search with collected data and to create an index on elasticsearch database. Please issue the following command:
-```
-sudo chmod +x icastats.sh
-sudo ./icastats.sh
-{"_index":"monitor-icastats","_type":"icastats","_id":"RD8FkmMBF84PFKnZKoVW","_version":1,"result":"created","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":0,"_primary_term":1}
-{"_index":"monitor-icastats","_type":"icastats","_id":"RD8FkmMBF84PFKnZKoVW","_version":1,"result":"created","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":0,"_primary_term":1}
-[...truncated...]
-```
-
 It is normal to see every 5 seconds a new line being displayed. Ervery 5 seconds, a record will be sent to the elasticsearch db. 
 
 To assess that it works properly, with web interface there are new records added in the elasticsearch db.
 Your elasticsearh web interface should look like the foolowing:
-![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/Capture%20d%E2%80%99%C3%A9cran%202018-05-24%20%C3%A0%20140351%20(2).png)
+![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/elasticsearch-tool-vmstat-icastats.png)
 
 You are now good for the part 3 about creating a dashboard to magnify live captured crypto information.
