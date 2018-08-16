@@ -61,7 +61,7 @@ Your index contains a timestamp field that you want to use to perform time-based
 
 Here you are, you just sourced Kibana to your crypto monitoring Elasticsearch DB and its content. The structure of the index monitor* is displayed front of you.
 
-![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/kibana-index-creation3.png)
+![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/kibana-index-creation4.png)
 
 It is now time to capture a set of information from the DB thanks to a search.
 **Action:** Click on the left tab bar on **"Discover"**. 
