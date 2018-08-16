@@ -22,7 +22,7 @@ The Elastic Stack is the next evolution of ELK.
 
 
 
-## 1. Cloning the ELK-CPACF github repository
+## Cloning the ELK-CPACF github repository
 
 First of all, let's install the lab required components and their dependencies in your LinuxONE Linux guest. Please issue the following command:
 ```
@@ -64,7 +64,7 @@ ls -l
 * part3.md    : Administrative git landing page of part3.
 
 
-## 1. Deploying an ELK Docker stack
+## Deploying an ELK Docker stack
 
 Let's move inside the ELK/ repository. Please issue the following command:
 ```
@@ -113,17 +113,39 @@ docker ps
 
 As you can see, there are 3 running docker containers: Elasticsearch, Kibana and Logstash.
 
-## 2. Seting-up crypto data collection
-Please, correct the default ESserverIP adress with your @IP adress according to your environment.
-Let's start with the script in charge to collect data from the icastats command:
+## Tooling form Elasticsearch
+To see with a user friendly interface the status of your elasticsearch instance, please, install in your computer the elasticsearch web-plugin named elasticsearch-head. 
+
+Fill in the form and connect to your elasticsearch instance with the appropriate IP adress. The portname is by default 9200.
+Eg. http://<your linuxONE public IP adress>:9200. 
+  
+You should be able to see something simillar to the following:
+![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/Capture%20d%E2%80%99e%CC%81cran%202018-06-20%20a%CC%80%20170639%20(2).png)
+
+## Seting-up local linux and crypto data collection
+### Linux VMSTATS Data collection
+First of all, let's move backward in the cloned git repository. Please issue the following command:
 ```
-sudo vi icastats.sh
-#!/bin/bash
-ESserverIP="18.197.196.0" <--- Change with your IP address here
+cd ..
 ```
 
-So see with a user friendly interface the status of your elasticsearch instance, please, install in your computer the elasticsearch web-plugin named elasticsearch-head. Fill in the form and connect to your elasticsearch instance with the appropriate IP adress. The portname is by default 9200. You should be able to see something simillar to the following:
-![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/Capture%20d%E2%80%99e%CC%81cran%202018-06-20%20a%CC%80%20170639%20(2).png)
+Now, let's configure the first data source made of Linux vmstats. To collect and to push these data to elasticsearch db we will use a script. Let's start to modify this script to adhere with your environment. Please, correct the default ESserverIP adress with your @IP adress according to your environment. Change the 2 line as show below:
+```
+vi vmstat-script.sh
+  #!/bin/bash
+  ESserverIP="127.0.0.1" <--- Change with your IP address here
+```
+
+Now, let's make this script executable thanks to following command:
+```
+chmod +x vmstat-script.sh
+```
+
+Let's start now the VMSTAT data collection.
+
+### Linux Crypto Icastats Data collection
+
+
 
 It is now time to feed your elastic search with collected data and to create an index on elasticsearch database. Please issue the following command:
 ```
