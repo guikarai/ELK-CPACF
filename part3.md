@@ -132,22 +132,20 @@ To build a visualization from a saved search, click the name of the saved search
 
 ![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/kibana-visualize-creation5.png)
 
+![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/kibana-visualize-creation6.png)
+
 You should be able to visualize incoming crypto metrics with a nice visual live updated.
 
 **Action:** Now on the top right bar, click on Save.
 
-#### 7. Save as "AES" your first vizualization chart.
-![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/Capture%20d%E2%80%99%C3%A9cran%202018-05-24%20%C3%A0%2011.47.40%20(2).png)
-
-Repeat the creation of visualization with DES, TDES, SHA-1 and DRBG-SHA-512. Your visualization collection should look like the following:
-Capture d’écran 2018-05-24 à 11.51.53 (2)
-
 ## Creating your first dashboard
 
-Capture d’écran 2018-05-24 à 11.52.10 (2)
 
-Capture d’écran 2018-05-24 à 11.52.15 (2)
+![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/kibana-dashboard-creation1.png)
 
-Capture d’écran 2018-05-24 à 11.52.32 (2)
+![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/kibana-dashboard-creation2.png)
 
-Capture d’écran 2018-05-24 à 11.52.55 (2)
+![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/kibana-dashboard-creation3.png)
+
+![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/kibana-dashboard-creation4.png)
+
