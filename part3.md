@@ -15,17 +15,32 @@ Kibana is a window into the Elastic Stack. It enables visual exploration and rea
 
 ## Accessing to Kibana
 
-Note that your IP adress is different, you must adapt the following accordingly.
-http://18.197.196.0:5601
+Note that your IP adress is different, you must adapt the following accordingly. You can access to the Kibana landing page using the following URL: http://10.3.57.117:5601
 
-The kibana web interface should look like as follow:
-![alt text](https://github.com/guikarai/ELK-CPACF/images/kibana-landingpage.png)
+A reachable kibana web interface should look like as follow:
+![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/kibana-landingpage.png)
+
+That is a good start. You can connect to Kibana. Now, let's see how Kibana can connect to a source of data (in our case the Elasticsearch DB).
+
+## Sourcing the ElasticSearch DataSource
+
+It is time to create an Index Pattern to Connect to Elasticsearh. To use Kibana, you have to tell it about the Elasticsearch indices that you want to explore by configuring one or more index patterns. 
+
+Click on the left tab bar to *"Management"*. You will land on the following page:
+
+![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/kibana-index-creation0.png)
 
 ## Creating your first index
 
+An index pattern identifies one or more Elasticsearch indices that you want to explore with Kibana. Kibana looks for index names that match the specified pattern. An asterisk (*) in the pattern matches zero or more characters. For example, the pattern myindex-* matches all indices whose names start with myindex-, such as myindex-1 and myindex-2.
 
+An index pattern can also simply be the name of a single index.
 
+**Action:** Click on Index pattern area, and fill the tab with **monitor-vmstat*** as follow. 
 
+**Action:** Then click to **Next Step**.
+
+![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/kibana-index-creation1.png)
   
 #### 2. Define an index pattern
 Click on the left tab bar to "Management".
