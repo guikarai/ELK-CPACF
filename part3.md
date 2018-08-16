@@ -63,35 +63,24 @@ Here you are, you just sourced Kibana to your crypto monitoring Elasticsearch DB
 
 ![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/kibana-index-creation4.png)
 
+## Creating a second index index about Linux crypto data
+
+According to previous step, create a new index with the following informaton.
+* Index pattern: monitor-icastats
+* Add timestamp: @Timestamp
+
 It is now time to capture a set of information from the DB thanks to a search.
+
 **Action:** Click on the left tab bar on **"Discover"**. 
-
-
-#### 2. Define an index pattern
-Click on the left tab bar to "Management".
-
-#### 3. Define an index pattern named "monitor*"
-Click on Index pattern area, and fill the tab with monitor* as follow. 
-Then click to Next Step.
-![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/Capture%20d%E2%80%99%C3%A9cran%202018-05-24%20%C3%A0%2011.44.34%20(2).png)
-
-#### Save your defined an index pattern
-In configure settings panel, please select @Timestamp.
-Then validate by clicking on Create index pattern.
-![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/Capture%20d%E2%80%99%C3%A9cran%202018-05-24%20%C3%A0%2011.46.34%20(2).png)
-
-#### Check your new defined pattern
-The structure of the index monitor* is displayed front of you:
-![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/Capture%20d%E2%80%99%C3%A9cran%202018-05-24%20%C3%A0%2011.46.45%20(2).png)
 
 ## Creating your first search
 
 You can interactively explore your data from the Discover page. You have access to every document in every index that matches the selected index pattern. You can submit search queries, filter the search results, and view document data. You can also see the number of documents that match the search query and get field value statistics. If a time field is configured for the selected index pattern, the distribution of documents over time is displayed in a histogram at the top of the page.
 
-#### 1. Click on the left tab bar to "Discover". 
+### 1. Click on the left tab bar to "Discover". 
 ![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/Capture%20d%E2%80%99e%CC%81cran%202018-06-20%20a%CC%80%2017.07.05%20(2).png)
 
-#### 2. Let's start to discover and to explore crypto data sent by LinuxONE virtual machine.
+### 2. Let's start to discover and to explore crypto data sent by LinuxONE virtual machine.
 When you submit a search request, the histogram, Documents table, and Fields list are updated to reflect the search results. The total number of hits (matching documents) is shown in the toolbar. The Documents table shows the first five hundred hits. 
 
 By default, the hits are listed in reverse chronological order, with the newest documents shown first. You can reverse the sort order by clicking the Time column header. You can also sort the table by the values in any indexed field.
