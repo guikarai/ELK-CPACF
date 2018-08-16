@@ -20,6 +20,33 @@ More information about ELK here: https://www.elastic.co
 
 The Elastic Stack is the next evolution of ELK.
 
+
+
+## 1. Cloning the CPACF-ELK github repository
+
+First of all, let's install the lab required components and their dependencies in your LinuxONE Linux guest. Please issue the following command:
+```
+yum install docker-ce docker-compose git curl
+```
+
+Once done, it now time to clone the github repository of this code pattern. Please issue the following command:
+```
+git clone
+```
+
+## 1. Deploying an ELK Docker stack
+
+```
+docker ps
+
+  CONTAINER ID        IMAGE                                      COMMAND               CREATED             STATUS              PORTS                                                                                                    NAMES
+  94c1e73369ff        hyperledgerlinuxone/kibana:latest          "kibana -H 0.0.0.0"   3 seconds ago       Up 2 seconds        0.0.0.0:514->514/tcp, 0.0.0.0:5000->5000/tcp, 0.0.0.0:5043->5043/tcp, 0.0.0.0:9292->9292/tcp, 5601/tcp   Logstash
+  fdafc035465d        hyperledgerlinuxone/kibana:latest          "kibana -H 0.0.0.0"   12 minutes ago      Up 12 minutes       0.0.0.0:5601->5601/tcp                                                                                   Kibana
+  fdbef59b18b3        hyperledgerlinuxone/elasticsearch:latest   "elasticsearch"       12 minutes ago      Up 12 minutes       0.0.0.0:9200->9200/tcp, 0.0.0.0:9300->9300/tcp                                                           Elasticsearch
+
+```
+
+
 ## 1. Seting-up an ELK infrastructure 
 An ELK stack can be implemented very easily, not matter the processor architecture.
 
