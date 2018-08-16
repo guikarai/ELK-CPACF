@@ -81,7 +81,7 @@ You can interactively explore your data from the Discover page. You have access 
 ### 1. Click on the left tab bar to "Discover". 
 ![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/kibana-search-creation0.png)
 
-### 2. Let's start to discover and to explore crypto data sent by LinuxONE virtual machine.
+### 2. Let's start to discover and to explore VMSTAT data sent by LinuxONE virtual machine.
 When you submit a search request, the histogram, Documents table, and Fields list are updated to reflect the search results. The total number of hits (matching documents) is shown in the toolbar. The Documents table shows the first five hundred hits. 
 
 By default, the hits are listed in reverse chronological order, with the newest documents shown first. You can reverse the sort order by clicking the Time column header. You can also sort the table by the values in any indexed field.
@@ -101,43 +101,40 @@ If successful, you must see the following message on top of the Kibana interface
 
 Same as above with the following informations:
 
-**Pattern-index :** monitor-icastats
+  **Pattern-index :** monitor-icastats
 
-**Available-field :** Host
+  **Available-field :** Host
 
-**Save search as :** icastats-host
+  **Save search as :** icastats-host
 
 # Creating your first visualizations
 
 ## Creating your first visualization charts for VMSTAT data
 A Kibana dashboard displays a collection of visualizations and searches. You can arrange, resize, and edit the dashboard content and then save the dashboard so you can share it.
 
-#### 1. Click on Visualize in the side navigation.
-![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/Capture%20d%E2%80%99%C3%A9cran%202018-05-24%20%C3%A0%2011.47.40%20(2).png)
+**Action:** Click on **Visualize** in the side navigation.
 
-#### 2. Click the Create new visualization button or the + button.
-![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/Capture%20d%E2%80%99%C3%A9cran%202018-05-24%20%C3%A0%2011.47.40%20(2).png)
+**Action:** Click the Create new visualization button or the + button:
 
-#### 3. Choose the visualization type: Vertical Bar
-![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/Capture%20d%E2%80%99%C3%A9cran%202018-05-24%20%C3%A0%2011.48.41%20(2).png)
+![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/kibana-visualize-creation0.png)
 
-#### 4. Specify a search query to retrieve the data for your visualization.
+** Action:** Choose the visualization type: Visual Builder
+![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/kibana-visualize-creation1.png)
+
 To build a visualization from a saved search, click the name of the saved search you previously saved (icastats). This opens the visualization builder and loads the selected query. When you build a visualization from a saved search, any subsequent modifications to the saved search are automatically reflected in the visualization. To disable automatic updates, you can disconnect a visualization from the saved search.
-![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/Capture%20d%E2%80%99%C3%A9cran%202018-05-24%20%C3%A0%2011.48.53%20(2).png)
 
-#### 5. Vizualization builder
-In the visualization builder, choose the metric aggregation for the visualization’s Y axis: Average
-In the visualization builder, choose the metric field for the visualization’s Y axis: AES CBC
-For the visualizations X axis, select a bucket aggregation: Date Histogram
-For the visualizations X axis, select a bucket field: @Timestamp
-For the visualizations X axis, select a bucket interval: Auto
+** Action:** Specify a search query to retrieve the data for your visualization.
+![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/kibana-visualize-creation2.png)
 
-Now click on play button as follow:
-![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/Capture%20d%E2%80%99%C3%A9cran%202018-05-24%20%C3%A0%2011.49.17%20(2).png)
+![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/kibana-visualize-creation3.png)
 
-You should be able to visualize incoming crypto metrics with a bar chart.
+![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/kibana-visualize-creation4.png)
 
-#### 6. Now on the top right bar, click on Save.
+![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/kibana-visualize-creation5.png)
+
+You should be able to visualize incoming crypto metrics with a nice visual live updated.
+
+**Action:** Now on the top right bar, click on Save.
 
 #### 7. Save as "AES" your first vizualization chart.
 ![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/Capture%20d%E2%80%99%C3%A9cran%202018-05-24%20%C3%A0%2011.47.40%20(2).png)
