@@ -79,8 +79,6 @@ It is now time to discovert, search, and filter sent information to the Elastics
 
 You can interactively explore your data from the Discover page. You have access to every document in every index that matches the selected index pattern. You can submit search queries, filter the search results, and view document data. You can also see the number of documents that match the search query and get field value statistics. If a time field is configured for the selected index pattern, the distribution of documents over time is displayed in a histogram at the top of the page.
 
-**Action:**  Click on the left tab bar to "Discover".
-
 ![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/kibana-search-creation0.png)
 
 Let's start to discover and to explore VMSTAT data sent by LinuxONE virtual machine. When you submit a search request, the histogram, Documents table, and Fields list are updated to reflect the search results. The total number of hits (matching documents) is shown in the toolbar. The Documents table shows the first five hundred hits. 
@@ -88,25 +86,36 @@ Let's start to discover and to explore VMSTAT data sent by LinuxONE virtual mach
 By default, the hits are listed in reverse chronological order, with the newest documents shown first. You can reverse the sort order by clicking the Time column header. You can also sort the table by the values in any indexed field.
 
 **Action:** On Available field MODE, on the line of "Host", Click on "add" field MODE. It result the following:
+
 ![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/kibana-search-creation1.png)
 
 Now we are good. Let's save this search with a name we can refer later. Saving searches enables you to reload them into Discover and use them as the basis for visualizations. Saving a search saves both the search query string and the currently selected index pattern.
 
-**Action:** Now on the top right bar, click on Save as follow:
+**Action:** Now on the top right bar, click on **Save**, and name your save **vmstat-host** as follow:
+
 ![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/kibana-search-creation2.png)
 
 If successful, you must see the following message on top of the Kibana interface:
+
 ![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/kibana-search-creation3.png)
 
-## Creating a search about Linux crypto ICASTATS data
+## Creating a second search about Linux crypto data
 
-Same as above with the following informations:
+You just create your first index about vmstat. Not, please create a new index about Linux encryption activity the with the following information:
 
-  **Pattern-index :** monitor-icastats
+* **Action:** Click on the left tab bar on **"Discover"**. 
 
-  **Available-field :** Host
+* **Action:** Select the index monitor-icastats as follow:
 
-  **Save search as :** icastats-host
+![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/kibana-search-creation5.png)
+
+The name of the index **monitor-icastats** should be visible as follow:
+
+![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/kibana-search-creation4.png)
+
+* **Action:** On **Available field MODE**, on the line of **Host**, Click on **add** field MODE.
+
+* **Action:** Now on the top right bar, click on **Save**, and name your save **icastats-host**.
 
 # Creating your first visualizations
 
