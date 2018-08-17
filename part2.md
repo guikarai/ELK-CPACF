@@ -74,7 +74,7 @@ ls -l
 * part3.md    : Administrative git landing page of part3.
 
 
-## Deploying an ELK Docker bsaed stack
+## Deploying an ELK Docker based stack
 
 Let's move inside the ELK/ repository. Please issue the following command:
 ```
@@ -137,6 +137,7 @@ You should be able to see something simillar to the following:
 ![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/Capture%20d%E2%80%99e%CC%81cran%202018-06-20%20a%CC%80%20170639%20(2).png)
 
 ## Seting-up local linux and crypto data collection
+
 ### Linux VMSTATS Data collection
 First of all, let's move backward in the cloned git repository. Please issue the following command:
 ```
