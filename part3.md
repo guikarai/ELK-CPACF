@@ -13,7 +13,7 @@ In this part, you will create your first crypto dashboard with Kibana.
 
 Kibana is a window into the Elastic Stack. It enables visual exploration and real-time analysis of your data in Elasticsearch. This video is perfect for users that are new to Kibana and are looking for a primer on data exploration, visualization, and dashboarding. Watch Alex Francoeur give a demo of going from a Kibana installation to a full dashboard in matter of minutes. 
 
-# Accessing to Kibana
+# 1. Accessing to Kibana
 
 Note that the IP adress of your LinuxONE cloud Linux VM is different, you must adapt the following accordingly. You can access to the Kibana landing page using the following URL: http://your_ip_adress:5601
 
@@ -22,7 +22,7 @@ A reachable kibana web interface should look like as follow:
 
 Now, let's see how Kibana can connect to a source of data (in our case the Elasticsearch DB).
 
-# Sourcing the ElasticSearch DataSource
+# 2. Sourcing the ElasticSearch DataSource
 
 It is time to create an Index Pattern to Connect to Elasticsearh. To use Kibana, you have to tell it about the Elasticsearch indices that you want to explore by configuring one or more index patterns. 
 
@@ -73,7 +73,7 @@ It is now time to discovert, search, and filter sent information to the Elastics
 
 **Action:** Click on the left tab bar on **"Discover"**. 
 
-# Creating your first "Searchs"
+# 3. Creating your first "Searchs"
 
 ## Creating a search about Linux VMSTAT data
 
@@ -117,7 +117,7 @@ The name of the index **monitor-icastats** should be visible as follow:
 
 * **Action:** Now on the top right bar, click on **Save**, and name your save **icastats-host**.
 
-# Creating your first visualizations
+# 4. Creating your first visualizations
 
 ## Creating your first visualization charts for VMSTAT data
 A Kibana dashboard displays a collection of visualizations and searches. You can arrange, resize, and edit the dashboard content and then save the dashboard so you can share it.
@@ -148,8 +148,7 @@ You should be able to visualize incoming crypto metrics with a nice visual live 
 
 **Action:** Now on the top right bar, click on Save.
 
-## Creating your first dashboard
-
+# 5. Creating your first dashboard
 
 ![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/kibana-dashboard-creation1.png)
 
