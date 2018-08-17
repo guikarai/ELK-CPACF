@@ -107,11 +107,11 @@ You just create your first search about vmstat. Now, please create a new index a
 
 * **Action:** Select the index **monitor-icastats** as follow:
 
-![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/kibana-search-creation5.png)
+![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/kibana-search-creation4.png)
 
 The name of the index **monitor-icastats** should be visible as follow:
 
-![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/kibana-search-creation4.png)
+![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/kibana-search-creation5.png)
 
 * **Action:** On **Available field MODE**, on the line of **Host**, Click on **add** field MODE.
 
