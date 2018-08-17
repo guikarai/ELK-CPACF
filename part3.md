@@ -9,7 +9,6 @@ The agenda of this section is about:
 4. Creating your first charts with Kibana
 5. Creating your first dashboard with Kibana
 6. Sharing your first crypto dashboard
-In this part, you will create your first crypto dashboard with Kibana. 
 
 Kibana is a window into the Elastic Stack. It enables visual exploration and real-time analysis of your data in Elasticsearch. This video is perfect for users that are new to Kibana and are looking for a primer on data exploration, visualization, and dashboarding. Watch Alex Francoeur give a demo of going from a Kibana installation to a full dashboard in matter of minutes. 
 
@@ -287,3 +286,12 @@ If successful, you must see the following message on top of the Kibana interface
 
 ![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/kibana-dashboard-creation4.png)
 
+# 6. Sharing your first dashboard
+
+You can either share a direct link to a Kibana dashboard, or embed the dashboard in a web page. Users must have Kibana access to view an embedded dashboard.
+
+**Action:** From the dashboard you have created and you want to share, In the menu bar, click **Share**.
+
+![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/kibana-dashboard-share0.png)
+
+Copy the link you want to share or the iframe you want to embed. You can share the live dashboard or a static snapshot of the current point in time.
