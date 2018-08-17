@@ -8,7 +8,9 @@
 5. Tooling for Elasticsearch
 6. Seting-up local linux and crypto data collection
 
-In this part, you will learn how to monitor captured LinuxONE crypto activity thanks to APIs. You will send these captured information to a no-slq database (Elasticsearch Database).
+In this part, you will learn how to monitor captured LinuxONE crypto activity thanks to APIs. You will send these captured information to a no-slq database (Elasticsearch Database). The objective is to deploy and ELK infrastructure able to create the following kind of dashboard:
+
+![alt-text](https://github.com/guikarai/ELK-CPACF/blob/master/images/full-dashboard.png)
 
 ## What the ELK..?!
 Elasticsearch is a search engine based on Lucene. It provides a distributed, multitenant-capable full-text search engine with an HTTP web interface and schema-free JSON documents. Elasticsearch is developed in Java and is released as open source under the terms of the Apache License. Official clients are available in Java, .NET (C#), PHP, Python, Apache Groovy, Ruby and many other languages. According to the DB-Engines ranking, Elasticsearch is the most popular enterprise search engine followed by Apache Solr, also based on Lucene.
