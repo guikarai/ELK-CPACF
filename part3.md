@@ -105,7 +105,7 @@ You just create your first index about vmstat. Not, please create a new index ab
 
 * **Action:** Click on the left tab bar on **"Discover"**. 
 
-* **Action:** Select the index monitor-icastats as follow:
+* **Action:** Select the index **monitor-icastats** as follow:
 
 ![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/kibana-search-creation5.png)
 
