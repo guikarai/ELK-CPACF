@@ -14,7 +14,7 @@ When you will complete this Code Pattern, you will understand how to:
 # Architecture
 This journey stats with a LinuxONE Linux guest which after some optimization will be able to claim hardware cryptographic assistance. From there, captured encryption activities to be magnified thanks to a docker based ELK dashboard.
 
-![Image of the Crypto Stack](https://github.com/guikarai/ELK-CPACF/blob/master/images/code-pattern-architecture.png)
+![Image of the Crypto Stack](https://github.com/guikarai/ELK-CPACF/blob/master/images/elk-linuxone-docker-architecture.png)
 
 1. User optimizes, collects and captures Enterprise Legacy environment encryption activity.
 3. User deploys a docker based ELK stack running on LinuxONE Community Cloud.
