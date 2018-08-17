@@ -303,53 +303,59 @@ You just created a crypto dashboard monitoring both the linux system activity an
 
 Proc: 
 -------
-r: How many processes are waiting for CPU time.
-b: Wait Queue - Process which are waiting for I/O (disk, network, user 
-    input,etc..) 
+* r: How many processes are waiting for CPU time.
+* b: Wait Queue - Process which are waiting for I/O (disk, network, user input,etc..) 
 
 
 Memory: 
 -----------
-swpd: shows how many blocks are swapped out to disk (paged). Total Virtual  
-          memory usage. 
-            
-Note: you can see the swap area configured in server using "cat proc/swaps"
-
-
-free: Idle Memory 
-buff: Memory used as buffers, like before/after I/O operations
-cache: Memory used as cache by the Operating System
+* swpd: shows how many blocks are swapped out to disk (paged). Total Virtual memory usage. 
+* free: Idle Memory 
+* buff: Memory used as buffers, like before/after I/O operations
+* cache: Memory used as cache by the Operating System
 
 
 Swap: 
 ---------
-si: How many blocks per second the operating system is swapping in. i.e 
-    Memory swapped in from the disk (Read from swap area to Memory)
-so: How many blocks per second the operating system is swaped Out. i.e 
-     Memory swapped to the disk (Written to swap area and cleared from 
-     Memory)
-
-
-In Ideal condition, We like to see si and so at 0 most of the time, and we definitely don’t like to see more than 10 blocks per second.
-
+* si: How many blocks per second the operating system is swapping in. i.e Memory swapped in from the disk (Read from swap area to Memory)
+* so: How many blocks per second the operating system is swaped Out. i.e Memory swapped to the disk (Written to swap area and cleared from Memory)
 
 IO: 
 ------
-bi: Blocks received from block device - Read (like a hard disk) 
-bo: Blocks sent to a block device - Write
-
+* bi: Blocks received from block device - Read (like a hard disk) 
+* bo: Blocks sent to a block device - Write
 
 System: 
 -------------
-in: The number of interrupts per second, including the clock. 
-cs: The number of context switches per second. 
-
+* in: The number of interrupts per second, including the clock. 
+* cs: The number of context switches per second. 
 
 CPU: 
 --------
-us: percentage of cpu used for running non-kernel code. (user time, including 
-     nice time) 
-sy: percentage of cpu used for running kernel code. (system time - network, IO 
-     interrupts, etc) 
+* us: percentage of cpu used for running non-kernel code. (user time, including  nice time) 
+* sy: percentage of cpu used for running kernel code. (system time - network, IO interrupts, etc) 
 id: cpu idle time in percentage.
-wa: percentage of time spent by cpu for waiting to IO.
+* wa: percentage of time spent by cpu for waiting to IO.
+
+AES:
+-------------
+* AES-CBC:  AES CBC mode of operation counter increases to indicate the use of the MSA Hardware instruction. 
+* AES-CFB:  AES CFB mode of operation counter increases to indicate the use of the MSA Hardware instruction.
+* AES-CMAC: AES CMAC mode of operation counter increases to indicate the use of the MSA Hardware instruction.
+* AES-CTR:  AES CTR mode of operation counter increases to indicate the use of the MSA Hardware instruction.
+* AEC-ECB:  AES ECB mode of operation counter increases to indicate the use of the MSA Hardware instruction.
+* AES-OFB:  AES OFB mode of operation counter increases to indicate the use of the MSA Hardware instruction.
+* AES-XTS:  AES XTS mode of operation counter increases to indicate the use of the MSA Hardware instruction.
+
+RSA:
+-------------
+* RSA-CRT: RSA Chinese Reminder Theorem operation counter increases to indicate the use of the Hardware.
+* RSA-ME: RSA Modulus Exponant operation counter increases to indicate the use of the Hardware.
+
+SHA:
+-------------
+* SHA-1: SHA1 family hashing functions operation counter increases to indicate the use of the MSA Hardware instruction.
+* SHA2-256: SHA2 family hashing functions operation counter increases to indicate the use of the MSA Hardware instruction.
+* SHA2-384: SHA2 family hashing functions operation counter increases to indicate the use of the MSA Hardware instruction.
+* SHA2-512: SHA2 family hashing functions operation counter increases to indicate the use of the MSA Hardware instruction.
+* DRBG-SHA-512: The DRBG mechanisms developed and approved by NIST (as in SP 800-90Ar1) use modern algorithms as strong as SHA-512 and AES-256. Operation counter increases to indicate the use of the Hardware.
