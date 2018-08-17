@@ -9,6 +9,7 @@ The agenda of this section is about:
 4. Creating your first charts with Kibana
 5. Creating your first dashboard with Kibana
 6. Sharing your first crypto dashboard
+7. Using your first dashboard
 
 Kibana is a window into the Elastic Stack. It enables visual exploration and real-time analysis of your data in Elasticsearch. This video is perfect for users that are new to Kibana and are looking for a primer on data exploration, visualization, and dashboarding. Watch Alex Francoeur give a demo of going from a Kibana installation to a full dashboard in matter of minutes. 
 
@@ -295,3 +296,60 @@ You can either share a direct link to a Kibana dashboard, or embed the dashboard
 ![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/kibana-dashboard-share0.png)
 
 Copy the link you want to share or the iframe you want to embed. You can share the live dashboard or a static snapshot of the current point in time.
+
+# 7. 7. Using your first dashboard
+
+You just created a crypto dashboard monitoring both the linux system activity and the hardware crypto activity. Using this dashboard, you can monitor over the time the following information:
+
+Proc: 
+-------
+r: How many processes are waiting for CPU time.
+b: Wait Queue - Process which are waiting for I/O (disk, network, user 
+    input,etc..) 
+
+
+Memory: 
+-----------
+swpd: shows how many blocks are swapped out to disk (paged). Total Virtual  
+          memory usage. 
+            
+Note: you can see the swap area configured in server using "cat proc/swaps"
+
+
+free: Idle Memory 
+buff: Memory used as buffers, like before/after I/O operations
+cache: Memory used as cache by the Operating System
+
+
+Swap: 
+---------
+si: How many blocks per second the operating system is swapping in. i.e 
+    Memory swapped in from the disk (Read from swap area to Memory)
+so: How many blocks per second the operating system is swaped Out. i.e 
+     Memory swapped to the disk (Written to swap area and cleared from 
+     Memory)
+
+
+In Ideal condition, We like to see si and so at 0 most of the time, and we definitely don’t like to see more than 10 blocks per second.
+
+
+IO: 
+------
+bi: Blocks received from block device - Read (like a hard disk) 
+bo: Blocks sent to a block device - Write
+
+
+System: 
+-------------
+in: The number of interrupts per second, including the clock. 
+cs: The number of context switches per second. 
+
+
+CPU: 
+--------
+us: percentage of cpu used for running non-kernel code. (user time, including 
+     nice time) 
+sy: percentage of cpu used for running kernel code. (system time - network, IO 
+     interrupts, etc) 
+id: cpu idle time in percentage.
+wa: percentage of time spent by cpu for waiting to IO.
