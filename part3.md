@@ -169,7 +169,7 @@ Now, you understand how it works, so, please create a new section for each sourc
 * cp-us : CPU consummed by user activities.
 * cp-wa : CPU is wait state.
 
-**Action:** To make the Visual Builder easier to use, please compress all your section by clicking on the **shrinker button** located at the left of the charta data color of each section. 
+**Action:** To make the Visual Builder easier to use, please compress all your section by clicking on the **shrinker** button located at the left of the chart data color of each section. 
 
 ![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/kibana-visualize-creation11.png)
 
@@ -187,11 +187,73 @@ If successful, you must see the following message on top of the Kibana interface
 
 ![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/kibana-visualize-creation5.png)
 
+**Action:** Click on **Visualize** in the side navigation.
+
+Now your job, is to create the following chart regarding the Index monitor-vmstat:  IO, Memory, Procs, Swap, System.
+Your collection of visualization should like the following (this is your new target):
+
 ![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/kibana-visualize-creation6.png)
 
-You should be able to visualize incoming crypto metrics with a nice visual live updated.
+To ease the creation of your visuals, you can find below information you can use to succeed. Feel free to define your own colors.
 
-**Action:** Now on the top right bar, click on Save.
+* **IO** : Name of the visualization to be saved
+  * io-bi
+  * ui-bo
+
+* **Memory**
+  * memory-buff
+  * memory-cache
+  * memory-free
+  * memory-swpd
+
+* **Procs** : Name of the visualization to be saved
+  * procs-b
+  * procs-r
+
+* **Swap** : Name of the visualization to be saved
+  * swap-so
+  * swap-si
+
+* **System** : Name of the visualization to be saved
+  * system-cs
+  * system-in
+
+## Creating visualizations about Linux crypto data
+
+**Action:** Click on **Visualize** in the side navigation.
+
+Now your job, is to create the following chart regarding the Index monitor-icastats:  AES, SHA, RSA.
+
+Your collection of visualization **must** looks like the following (this is your new target):
+
+![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/kibana-visualize-creation12.png)
+
+To ease the creation of your visuals, you can find below information you can use to succeed. Feel free to define your own colors.
+
+Don't forget for each create visuals to select the appropriate source of data **monitor-icastats** as show below:
+![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/kibana-visualize-creation13.png)
+
+* **RSA** : Name of the visualization to be saved
+  * RSA-CRT
+  * RSA-ME
+
+* **AES**
+  * AES-CBC
+  * AES-CFB
+  * AES-CMAC
+  * AES-CTR
+  * AES-ECB
+  * AES-OFB
+  * AES-XTS
+
+* **SHA** : Name of the visualization to be saved
+  * SHA-1
+  * SHA2-256
+  * SHA2-384
+  * SHA2-512
+  * DRBG-SHA-512
+
+Once done, we can say this is a great achievement! We are now ready to create the Crypto Dashboard.
 
 # 5. Creating your first dashboard
 
