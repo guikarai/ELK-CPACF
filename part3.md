@@ -257,11 +257,33 @@ Once done, we can say this is a great achievement! We are now ready to create th
 
 # 5. Creating your first dashboard
 
+A Kibana dashboard displays a collection of visualizations and searches. You can arrange, resize, and edit the dashboard content and then save the dashboard so you can share it.
+
+**Action:** Click on **Dashboard** in the side navigation.
+
 ![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/kibana-dashboard-creation1.png)
+
+You have no dashboard yet, this is why it is empty. You are kindly invite to create your first dashboard. Let's do it.
+
+**Action:** Click **Create new dashboard**. Then Click **Add**.
+
+To add a visualization, select its name from the list of visualizations or click Add new visualization to create one. If you have a large number of visualizations, you can filter the list.
 
 ![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/kibana-dashboard-creation2.png)
 
+**Action:** Add all the visualization you created. Click once on each vizualisation. This will add them on the dashboard.
+
+The visualizations in the dashboard are stored in panels that you can move, resize, and delete. To start editing, open the dashboard and click Edit in the menu bar. To move a panel, click and hold the header of a panel and drag to the new location. To resize a panel, click the resize control on the lower right and drag to the new dimensions. Additional commands for managing the panel and its contents are in the gear menu in the upper right. Feel free to arrange their position in the dashboard.
+
+You can find below a proposition for your crypto dashboard:
+
+![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/kibana-dashboard-creation5.png)
+
+**Action:** Now on the top right bar, click on **Save**, and name your save **Crypto Activity Monitoring**.
+
 ![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/kibana-dashboard-creation3.png)
+
+If successful, you must see the following message on top of the Kibana interface:
 
 ![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/kibana-dashboard-creation4.png)
 
