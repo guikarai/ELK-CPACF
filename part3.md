@@ -117,28 +117,73 @@ The name of the index **monitor-icastats** should be visible as follow:
 
 * **Action:** Now on the top right bar, click on **Save**, and name your save **icastats-host**.
 
-# 4. Creating your first visualizations
+# 4. Creating your first "Visualizations"
 
-## Creating your first visualization charts for VMSTAT data
+## Creating visualization charts about Linux VMSTAT data
+
 A Kibana dashboard displays a collection of visualizations and searches. You can arrange, resize, and edit the dashboard content and then save the dashboard so you can share it.
 
 **Action:** Click on **Visualize** in the side navigation.
 
-**Action:** Click the Create new visualization button or the + button:
-
 ![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/kibana-visualize-creation0.png)
 
-** Action:** Choose the visualization type: Visual Builder
+**Action:** Click the **Create new visualization** button or the **+** button:
+
 ![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/kibana-visualize-creation1.png)
 
-To build a visualization from a saved search, click the name of the saved search you previously saved (icastats). This opens the visualization builder and loads the selected query. When you build a visualization from a saved search, any subsequent modifications to the saved search are automatically reflected in the visualization. To disable automatic updates, you can disconnect a visualization from the saved search.
+To build a visualization from a saved search, click the name of the saved search you previously saved **vmstat-host**. This opens the visualization builder and loads the selected query. When you build a visualization from a saved search, any subsequent modifications to the saved search are automatically reflected in the visualization. To disable automatic updates, you can disconnect a visualization from the saved search.
 
-** Action:** Specify a search query to retrieve the data for your visualization.
-![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/kibana-visualize-creation2.png)
+**Action:** Choose the visualization type: **Visual Builder**
+
+You can see below the Visual Builder that will help you to create your first visual chart. This tool can be highly customized according your dashboard design need. First of all, you need to select the "Index" that is the source of the data.
+
+
+**Action:** Please, Click on **Panel Options** as show below:
+
+![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/kibana-visualize-creation7.png)
+
+From there, you can see that, data displayed in live above come from the Index pattern: **monitor-vmstat**. That is correct.
+
+**Action:** Please, Click on **Data**, to move back on the chart visual builder.
+
+It is now time to select some data to create an area charts. Let's create the **CPU Activity** chart together. VMSTAT data monitor CPU activity with the following field:
+* cp-sy : CPU connsumed by the system.
+* cp-id : CPU available and in idle state.
+* cp-st : CPU in steady state.
+* cp-us : CPU consummed by user activities.
+* cp-wa : CPU is wait state.
+
+It is now time for each of above data, to select them to be part of the same chart.
+
+**Action:** On the Data section panel, in **Metrics** section, and in the **Aggregation** field, Select **Average** and then select the data **cp-sy**.
+
+As you can see on top of the web page, the selected data is displayed. It is now time to stack others source of data that define a vmstat CPU activity.
+
+**Action:** To stack a new source of data in the chart, please cick on **+** as show below. It result to create a new section for a new source of data.
+
+![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/kibana-visualize-creation9.png)
+
+Now, you understand how it works, so, please create a new section for each source of data listed below. Don't forget to select the **Average** aggregation before selecting the source of data. 
+* cp-id : CPU available and in idle state.
+* cp-st : CPU in steady state.
+* cp-us : CPU consummed by user activities.
+* cp-wa : CPU is wait state.
+
+**Action:** To make the Visual Builder easier to use, please compress all your section by clicking on the **shrinker button** located at the left of the charta data color of each section. 
+
+![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/kibana-visualize-creation11.png)
+
+It will result the following:
 
 ![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/kibana-visualize-creation3.png)
 
+This is your future chart, so you can also decide color of each data. To do so, you simply have to click on the color for each data section.
+
+**Action:** Now on the top right bar, click on **Save**, and name your save **CPU**.
+
 ![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/kibana-visualize-creation4.png)
+
+If successful, you must see the following message on top of the Kibana interface:
 
 ![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/kibana-visualize-creation5.png)
 
