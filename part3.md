@@ -58,7 +58,7 @@ Here you are, you just sourced Kibana to your crypto monitoring Elasticsearch DB
 
 ## Creating a second index about Linux crypto data
 
-You just create your first index about vmstat. Not, please create a new index about Linux encryption activity the with the following information:
+You just create your first index about vmstat. Now, please create a new index about Linux encryption activity the with the following information:
 
 * **Action:** Click on the left tab bar to **"Management"**.
 * **Action:** Then Click on **Index patterns**.
@@ -101,7 +101,7 @@ If successful, you must see the following message on top of the Kibana interface
 
 ## Creating a second search about Linux crypto data
 
-You just create your first index about vmstat. Not, please create a new index about Linux encryption activity the with the following information:
+You just create your first search about vmstat. Now, please create a new index about Linux encryption activity the with the following information:
 
 * **Action:** Click on the left tab bar on **"Discover"**. 
 
