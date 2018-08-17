@@ -15,12 +15,12 @@ Kibana is a window into the Elastic Stack. It enables visual exploration and rea
 
 # Accessing to Kibana
 
-Note that your IP adress is different, you must adapt the following accordingly. You can access to the Kibana landing page using the following URL: http://10.3.57.112:5601
+Note that the IP adress of your LinuxONE cloud Linux VM is different, you must adapt the following accordingly. You can access to the Kibana landing page using the following URL: http://your_ip_adress:5601
 
 A reachable kibana web interface should look like as follow:
 ![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/kibana-landingpage.png)
 
-That is a good start. You can connect to Kibana. Now, let's see how Kibana can connect to a source of data (in our case the Elasticsearch DB).
+Now, let's see how Kibana can connect to a source of data (in our case the Elasticsearch DB).
 
 # Sourcing the ElasticSearch DataSource
 
@@ -28,61 +28,62 @@ It is time to create an Index Pattern to Connect to Elasticsearh. To use Kibana,
 
 **Action:** Click on the left tab bar to **"Management"**.
 
-**Action:** Then Click on **Index pattern**.
-
 ![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/kibana-index-creation0.png)
 
+**Action:** Then Click on **Index patterns**.
 
-## Creating your first index
-
-### A. Define an index pattern named "monitor*"
+## Creating your first "Index"
 
 An index pattern identifies one or more Elasticsearch indices that you want to explore with Kibana. Kibana looks for index names that match the specified pattern. An asterisk (*) in the pattern matches zero or more characters. For example, the pattern myindex-* matches all indices whose names start with myindex-, such as myindex-1 and myindex-2.
 
 An index pattern can also simply be the name of a single index.
 
-![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/kibana-index-creation1.png)
-
 **Action:** Click on Index pattern area, and fill the tab with **monitor-vmstat*** as follow. 
+
+![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/kibana-index-creation1.png)
 
 **Action:** Then click to **Next Step**.
   
-### B. Save your defined an index pattern
-
 Your index contains a timestamp field that you want to use to perform time-based comparisons, select the Index contains time-based events option and select the index field that contains the timestamp. Kibana reads the index mapping to list all of the fields that contain a timestamp.
 
 **Action:** In configure settings panel, please select **@Timestamp**.
 
-**Action:**  Then validate by clicking on **Create index pattern**.
-
 ![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/kibana-index-creation2.png)
 
-### C. Check your new defined pattern
+**Action:**  Then validate by clicking on **Create index pattern**.
 
-Here you are, you just sourced Kibana to your crypto monitoring Elasticsearch DB and its content. The structure of the index monitor* is displayed front of you.
+Here you are, you just sourced Kibana to your crypto monitoring Elasticsearch DB and its content. The structure of the index monitor-vmstat is displayed front of you.
 
 ![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/kibana-index-creation4.png)
 
-## Creating a second index index about Linux crypto data
+## Creating a second index about Linux crypto data
 
-According to previous step, create a new index with the following informaton.
-* Index pattern: monitor-icastats
-* Add timestamp: @Timestamp
+You just create your first index about vmstat. Not, please create a new index about Linux encryption activity the with the following information:
 
-It is now time to capture a set of information from the DB thanks to a search.
+* **Action:** Click on the left tab bar to **"Management"**.
+* **Action:** Then Click on **Index patterns**.
+* **Action:** Click on Index pattern area, and fill the tab with **monitor-icastats***.
+* **Action:** Then click to **Next Step**.
+* **Action:** In configure settings panel, please select **@Timestamp**.
+* **Action:**  Then validate by clicking on **Create index pattern**.
+
+Cool, you have now two created indexes. One named monitor-vmstat and one named monitor-icastats.
+
+It is now time to discovert, search, and filter sent information to the Elasticsearch DB thanks to a "Search".
 
 **Action:** Click on the left tab bar on **"Discover"**. 
 
-# Creating your first searchs
+# Creating your first "Searchs"
 
 ## Creating a search about Linux VMSTAT data
+
 You can interactively explore your data from the Discover page. You have access to every document in every index that matches the selected index pattern. You can submit search queries, filter the search results, and view document data. You can also see the number of documents that match the search query and get field value statistics. If a time field is configured for the selected index pattern, the distribution of documents over time is displayed in a histogram at the top of the page.
 
-### 1. Click on the left tab bar to "Discover". 
+**Action:**  Click on the left tab bar to "Discover".
+
 ![alt text](https://github.com/guikarai/ELK-CPACF/blob/master/images/kibana-search-creation0.png)
 
-### 2. Let's start to discover and to explore VMSTAT data sent by LinuxONE virtual machine.
-When you submit a search request, the histogram, Documents table, and Fields list are updated to reflect the search results. The total number of hits (matching documents) is shown in the toolbar. The Documents table shows the first five hundred hits. 
+Let's start to discover and to explore VMSTAT data sent by LinuxONE virtual machine. When you submit a search request, the histogram, Documents table, and Fields list are updated to reflect the search results. The total number of hits (matching documents) is shown in the toolbar. The Documents table shows the first five hundred hits. 
 
 By default, the hits are listed in reverse chronological order, with the newest documents shown first. You can reverse the sort order by clicking the Time column header. You can also sort the table by the values in any indexed field.
 
